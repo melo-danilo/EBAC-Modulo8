@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun setupView(){
+    private fun setupView(){
         viewMain = findViewById(R.id.view_main)
         editNome = findViewById(R.id.edit_nome)
         textNome = findViewById(R.id.txt_nome_defined)
@@ -34,14 +34,14 @@ class MainActivity : AppCompatActivity() {
         viewMain?.setBackgroundResource(util.getResource())
     }
 
-    fun setupButton(){
+    private fun setupButton(){
         val btnChangeImage = findViewById<Button>(R.id.btn_change_image)
         btnChangeImage.setOnClickListener {
             onClick()
         }
     }
 
-    fun onClick(){
+    private fun onClick(){
         numClicks++
         textNome?.text = buildString {
             append(editNome?.text)
